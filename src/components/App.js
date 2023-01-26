@@ -4,12 +4,12 @@ import LocationDetails from './LocationDetails';
 import ForecastSummaries from './ForecastSummaries';
 
 function App({ location, forecasts }) {
-  const { city, country } = location;
   return (
     <div className="forecast">
+      <p>Weather App</p>
       <LocationDetails
-        city={city}
-        country={country}
+        city={location.city}
+        country={location.country}
       />
       <ForecastSummaries forecasts={forecasts} />
     </div>

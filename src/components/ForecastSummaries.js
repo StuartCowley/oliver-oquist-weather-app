@@ -10,7 +10,7 @@ function ForecastSummaries({ forecasts }) {
           key={forecast.date}
           date={forecast.date}
           description={forecast.description}
-          icon={forecast.iron}
+          icon={forecast.icon}
           temperature={forecast.temperature}
         />
       ))}
