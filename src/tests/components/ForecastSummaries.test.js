@@ -28,4 +28,11 @@ describe("ForecastSummaries", () => {
     const { asFragment } = render(<ForecastSummaries forecasts={validProps} />);
     expect(asFragment()).toMatchSnapshot();
   });
+  it("renders the correct number of ForecastSummary instances", () => {
+    const { getAllByTestId } = render(
+      <ForecastSummaries forecasts={validProps} data-testid="forecast-summary" />,
+    );
+
+    expect(getAllByTestId("forecast-summary")).toHaveLength(2);
+  });
 });
