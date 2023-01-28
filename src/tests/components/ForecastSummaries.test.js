@@ -16,7 +16,7 @@ describe("ForecastSummaries", () => {
     {
       date: 2222222,
       description: "Stub description2",
-      icon: "502",
+      icon: "602",
       temperature: {
         max: 24,
         min: 13,
@@ -32,7 +32,7 @@ describe("ForecastSummaries", () => {
 
   it("renders the correct number of ForecastSummary instances", () => {
     const { getAllByTestId } = render(
-      <ForecastSummaries forecasts={validProps} data-testid="forecast-summary" />,
+      <ForecastSummaries forecasts={validProps} />,
     );
 
     expect(getAllByTestId("forecast-summary")).toHaveLength(2);

@@ -18,7 +18,7 @@ function ForecastSummary(props) {
         {formattedDate}
       </div>
       <div className="forecast-summary__icon" data-testid="forecast-icon">
-        <WeatherIcon name="owm" iconID={icon} />
+        <WeatherIcon name="owm" iconId={icon} />
       </div>
       <div className="forecast-summary__temperature">
         {temperature.max}
@@ -31,8 +31,6 @@ function ForecastSummary(props) {
   );
 }
 
-export default ForecastSummary;
-
 ForecastSummary.propTypes = {
   date: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
@@ -42,3 +40,5 @@ ForecastSummary.propTypes = {
     max: PropTypes.number,
   }).isRequired,
 };
+
+export default ForecastSummary;
