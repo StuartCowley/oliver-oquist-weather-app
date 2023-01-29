@@ -5,7 +5,8 @@ import ForecastDetails from "../../components/ForecastDetails";
 describe("ForecastDetails", () => {
   const validProps = [
     {
-      date: 123123123,
+      date: 1111111,
+      humidity: 30,
       temperature: {
         max: 11,
         min: 4,
@@ -14,12 +15,11 @@ describe("ForecastDetails", () => {
         speed: 13,
         direction: "s",
       },
-      humidity: 30,
     },
   ];
 
   it("renders correctly", () => {
-    const { asFragment } = render(<ForecastDetails forecasts={validProps} />);
+    const { asFragment } = render(<ForecastDetails forecast={validProps[0]} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
